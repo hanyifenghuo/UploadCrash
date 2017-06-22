@@ -3,6 +3,7 @@
 
 
 //startAuto封装了参数
+
 public class MyApplication extends Application {
     @Override
     public void onCreate() {
@@ -24,5 +25,6 @@ public class MyApplication extends Application {
 }
 
 登录后需要上传账号的，需要调用
+
 CrachCallback crachCallback=(CrachCallback)(Recovery.getInstance().getmCallback());
 crachCallback.setAccount("假装客户");
