@@ -20,7 +20,7 @@ public class DaoHelp extends OrmLiteSqliteOpenHelper {
     private static final String TABLE_NAME = "crash.db";
     private static DaoHelp instance;
     private  DaoHelp(Context context) {
-        super(context, TABLE_NAME, null, 1); //必须实现父类的方法，其中第二个参数是创建的数据库名，第4个参数是版本号，用于升级等操作
+        super(context, TABLE_NAME, null, 2); //必须实现父类的方法，其中第二个参数是创建的数据库名，第4个参数是版本号，用于升级等操作
     }
     public static DaoHelp getInstance(Context context){
         if(instance == null){

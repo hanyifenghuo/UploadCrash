@@ -5,6 +5,7 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 
 import com.crashutils.PhoneUtils;
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -72,7 +73,21 @@ public class CrashBaen {
     //0是未上传，1是已上传
     @DatabaseField(columnName = "isUpLoad" )
     private int isUpLoad;
+
+    @DatabaseField(columnName = "isdebug" )
+    private String isdebug;
+
+
     public CrashBaen(){}
+
+    public String getIsdebug() {
+        return isdebug;
+    }
+
+    public void setIsdebug(String isdebug) {
+        this.isdebug = isdebug;
+    }
+
 
     public int getIsUpLoad() {
         return isUpLoad;

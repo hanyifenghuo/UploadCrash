@@ -15,7 +15,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Recovery.getInstance()
-                .debug(true)
+                .debug(false)
                 .recoverInBackground(false)
                 .recoverStack(true)
                 .mainPage(MainActivity.class)

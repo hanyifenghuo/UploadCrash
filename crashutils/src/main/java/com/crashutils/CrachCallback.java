@@ -7,6 +7,7 @@ import com.crashutils.db.CrashBaen;
 import com.crashutils.db.DaoHelp;
 import com.j256.ormlite.dao.Dao;
 import com.zxy.recovery.callback.RecoveryCallback;
+import com.zxy.recovery.core.Recovery;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -62,6 +63,7 @@ public  class CrachCallback implements RecoveryCallback {
         bean.setIsUpLoad(0);//设置未上传
         bean.setAccount(account==null?"":account);
         bean.setmStrException(sb.toString());
+        bean.setIsdebug("1");
         return bean;
     }
 

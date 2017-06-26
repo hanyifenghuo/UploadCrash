@@ -135,6 +135,8 @@ public class UploadCrashUtils {
         map.put("WidthAndHeight", crashBaen.getWidthAndHeight()==null?"":crashBaen.getWidthAndHeight());
         map.put("mStrException",crashBaen.getmStrException()==null?"":crashBaen.getmStrException());
         map.put("app_name", appName==null?"":appName);
+        map.put("add_time", crashBaen.getCreatTime());
+        map.put("is_debug",Recovery.getInstance().isDebug()==true?"1":"0");
         return  map;
     }
 
