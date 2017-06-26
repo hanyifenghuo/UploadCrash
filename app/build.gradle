@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.hanyifeng'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -27,7 +30,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
     compile project(':crashutils')
-
 //    compile 'com.github.hanyifenghuo.UploadCrash:crashutils:v1.0'
 //    compile 'com.github.hanyifenghuo.UploadCrash:crashutils:1.1'
+//    compile 'com.github.hanyifenghuo:UploadCrash:crashutils:1.3'
 }
