@@ -38,6 +38,12 @@ public class MyApplication extends Application {
         UploadCrashUtils.getInstance().init(this).setUrl("http://192.168.2.116/ara/2/index/catchError")
         .setAppName(getString(R.string.app_name)).startAuto();
     }
+        @Override
+    public void onTerminate() {
+        // 程序终止的时候执行
+        UploadCrashUtils.getInstance().finishUpload();
+        super.onTerminate();
+     }
 }
 ```
 
