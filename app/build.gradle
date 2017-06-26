@@ -29,4 +29,5 @@ dependencies {
     compile project(':crashutils')
 
 //    compile 'com.github.hanyifenghuo.UploadCrash:crashutils:v1.0'
+//    compile 'com.github.hanyifenghuo.UploadCrash:crashutils:1.1'
 }

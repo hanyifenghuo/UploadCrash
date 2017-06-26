@@ -1,6 +1,7 @@
 package com.crashutils;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.crashutils.db.CrashBaen;
 import com.crashutils.db.DaoHelp;
@@ -72,7 +73,7 @@ public class UploadCrashUtils {
             {
                 Hashtable<String, String> map=getParams(crashBaen);
                 OkGo.post(url)
-                        .tag(this)
+                        .tag(UploadCrashUtils.this)
                         .params(map)
                         .execute(new StringCallback() {
                             @Override
@@ -81,7 +82,6 @@ public class UploadCrashUtils {
                             }
                         });
             }
-
         }
     }
 
@@ -93,7 +93,7 @@ public class UploadCrashUtils {
             if (url!=null&&!"".equals(url))
             {
                 OkGo.post(url)
-                        .tag(this)
+                        .tag(UploadCrashUtils.this)
                         .params(map)
                         .execute(new StringCallback() {
                             @Override
@@ -156,5 +156,11 @@ public class UploadCrashUtils {
     public UploadCrashUtils setAppName(String appName) {
         this.appName = appName;
         return this;
+    }
+
+    public void finishUpload()
+    {
+        Log.e("结束上传","1111");
+        OkGo.getInstance().cancelTag(UploadCrashUtils.this);
     }
 }
