@@ -16,7 +16,7 @@
  [![](https://jitpack.io/v/hanyifenghuo/UploadCrash.svg)](https://jitpack.io/#hanyifenghuo/UploadCrash)
  ```
  dependencies {
-	        compile 'com.github.hanyifenghuo.UploadCrash:crashutils:v1.0'
+	        compile 'com.github.hanyifenghuo.UploadCrash:crashutils:xx.xx'
 	}
   ```
 
